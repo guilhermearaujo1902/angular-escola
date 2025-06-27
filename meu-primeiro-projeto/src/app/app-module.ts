@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Aluno } from './componentes/aluno/aluno';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Aluno
   ],
   imports: [
     BrowserModule,
