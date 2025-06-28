@@ -1,0 +1,12 @@
+header, footer {
+    background-color: #13134b;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
