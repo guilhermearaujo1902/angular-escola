@@ -3,9 +3,15 @@
 </header>
 
 <main>
-  <app-aluno [aluno]="listaAlunos[0]"></app-aluno>
-  <app-aluno [aluno]="listaAlunos[1]"></app-aluno>
-  <app-aluno [teste]="title"></app-aluno>
+  <section class="cards">
+    <app-aluno [aluno]="listaAlunos[0]"></app-aluno>
+    <app-aluno [aluno]="listaAlunos[1]"></app-aluno>
+    <app-aluno [aluno]="listaAlunos[2]"></app-aluno>
+  </section>
+
+  <section class="lista">
+    <app-aluno-lista></app-aluno-lista>
+  </section>
 </main>
 
 <footer>

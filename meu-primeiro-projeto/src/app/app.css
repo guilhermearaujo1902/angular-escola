@@ -8,5 +8,10 @@ header, footer {
 main {
     padding: 20px;
     display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
     justify-content: center;
 }

@@ -1,6 +1,6 @@
 <div class="card">
 
-    <img src="../../../assets/images/user1.png" alt="">
+    <img [src]="aluno.imagem" alt="">
 
     <h2>{{ aluno.nome }}</h2>
 
@@ -15,6 +15,10 @@
     <p>
         <strong>Email</strong> {{ aluno.email }}
     </p>
+
+    <div class="aprovacao" [ngClass]="aluno.cadastro == true ? 'aprovado' : 'reprovado'">
+        <p>Aluno {{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</p>
+    </div>
 
 </div>
 
