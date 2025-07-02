@@ -11,7 +11,7 @@ main {
     flex-direction: column;
 }
 
-.cards {
+.cards, .lista {
     display: flex;
     justify-content: center;
 }

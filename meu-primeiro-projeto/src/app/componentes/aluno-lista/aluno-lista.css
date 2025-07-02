@@ -1,0 +1,34 @@
+.lista {
+    width: 800px;
+}
+
+table, tr {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ef6205;
+    color: #FFF;
+    text-align: left;
+}
+
+tr {
+    color: #383737;
+}
+
+th, td {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+table tr:nth-child(odd) {
+    background-color: #e1e1e1;
+}
+
+table tr:hover {
+    background-color: #1c076e;
+    color: #FFF;
+}

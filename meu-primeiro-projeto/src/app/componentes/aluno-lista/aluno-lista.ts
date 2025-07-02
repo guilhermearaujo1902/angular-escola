@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AlunoInterface } from '../../interfaces/AlunoInterface';
 
 @Component({
   selector: 'app-aluno-lista',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './aluno-lista.css'
 })
 export class AlunoLista {
+
+  @Input()
+  lista: AlunoInterface[] = [];
 
 }

@@ -3,14 +3,14 @@
 </header>
 
 <main>
-  <section class="cards">
+  <section class="cards" *ngIf="exibicao == 'cards'" >
     <app-aluno [aluno]="listaAlunos[0]"></app-aluno>
     <app-aluno [aluno]="listaAlunos[1]"></app-aluno>
     <app-aluno [aluno]="listaAlunos[2]"></app-aluno>
   </section>
 
-  <section class="lista">
-    <app-aluno-lista></app-aluno-lista>
+  <section class="lista" *ngIf="exibicao == 'lista'" >
+    <app-aluno-lista [lista]="listaAlunos"></app-aluno-lista>
   </section>
 </main>
 
