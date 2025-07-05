@@ -16,6 +16,10 @@
         <strong>Email</strong> {{ aluno.email }}
     </p>
 
+    <p>
+        <strong>Média</strong> Calcular a media
+    </p>
+
     <div class="aprovacao" [ngClass]="aluno.cadastro == true ? 'aprovado' : 'reprovado'">
         <p>Aluno {{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</p>
     </div>

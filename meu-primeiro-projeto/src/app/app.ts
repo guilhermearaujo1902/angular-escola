@@ -10,7 +10,7 @@ import { AlunoInterface } from './interfaces/AlunoInterface';
 export class App {
   protected title = 'meu-primeiro-projeto';
 
-  exibicao: string = 'cards';
+  exibicao: string = 'lista';
 
   listaAlunos: AlunoInterface[] = [
     {
@@ -19,7 +19,8 @@ export class App {
       email: 'harry@proway.com',
       cadastro: false,
       cursos: ['Javascript', 'HTML', 'CSS'],
-      imagem: 'assets/images/user1.png'
+      imagem: 'assets/images/user1.png',
+      notas: []
     },
     {
       matricula: 222,
@@ -27,7 +28,8 @@ export class App {
       email: 'hermione@proway.com',
       cadastro: true,
       cursos: ['Java', 'Postgres'],
-      imagem: 'assets/images/user3.png'
+      imagem: 'assets/images/user3.png',
+      notas: []
     },
     {
       matricula: 333,
@@ -35,8 +37,26 @@ export class App {
       email: 'rony@proway.com',
       cadastro: false,
       cursos: ['Python', 'Oracle'],
-      imagem: 'assets/images/user2.png'
+      imagem: 'assets/images/user2.png',
+      notas: []
+    },
+    {
+      matricula: 444,
+      nome: 'Bob Esponja',
+      email: 'bob@proway.com',
+      cadastro: true,
+      cursos: ['C++', 'PLSQL'],
+      imagem: 'assets/images/user4.webp',
+      notas: []
     }
   ];
+
+  alterarExibicao(): void {
+    if (this.exibicao == 'cards') {
+      this.exibicao = 'lista';
+    } else if (this.exibicao == 'lista') {
+      this.exibicao = 'cards';
+    }
+  }
 
 }

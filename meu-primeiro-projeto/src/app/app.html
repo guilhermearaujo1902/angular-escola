@@ -3,10 +3,16 @@
 </header>
 
 <main>
+
+  <div class="botoes">
+    <button (click)="alterarExibicao()">
+      Mostrar {{ exibicao == 'cards' ? 'Lista' : 'Cards' }}
+    </button>
+  </div>
+
   <section class="cards" *ngIf="exibicao == 'cards'" >
-    <app-aluno [aluno]="listaAlunos[0]"></app-aluno>
-    <app-aluno [aluno]="listaAlunos[1]"></app-aluno>
-    <app-aluno [aluno]="listaAlunos[2]"></app-aluno>
+    <app-aluno *ngFor="let alunoDaLista of listaAlunos" [aluno]="alunoDaLista"></app-aluno>
+
   </section>
 
   <section class="lista" *ngIf="exibicao == 'lista'" >

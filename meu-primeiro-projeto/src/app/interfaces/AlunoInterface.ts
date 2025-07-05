@@ -5,4 +5,5 @@ export interface AlunoInterface {
     cadastro: boolean;
     cursos: string[];
     imagem: string;
+    notas: number[];
 }

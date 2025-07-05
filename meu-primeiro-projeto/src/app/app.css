@@ -15,3 +15,23 @@ main {
     display: flex;
     justify-content: center;
 }
+
+.botoes {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botoes button {
+    background-color: #13134b;
+    color: #FFF;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.botoes button:hover {
+    background-color: #ef6205;
+}

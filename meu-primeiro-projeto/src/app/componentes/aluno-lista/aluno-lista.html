@@ -7,26 +7,12 @@
             <th>Cadastro</th>
             <th>Cursos</th>
         </tr>
-        <tr>
-            <td>{{ lista[0].matricula }}</td>
-            <td>{{ lista[0].nome }}</td>
-            <td>{{ lista[0].email }}</td>
-            <td>{{ lista[0].cadastro == true ? 'Aprovado' : 'Reprovado' }}</td>
-            <td>{{ lista[0].cursos }}</td>
-        </tr>
-        <tr>
-            <td>{{ lista[1].matricula }}</td>
-            <td>{{ lista[1].nome }}</td>
-            <td>{{ lista[1].email }}</td>
-            <td>{{ lista[1].cadastro == true ? 'Aprovado' : 'Reprovado' }}</td>
-            <td>{{ lista[1].cursos }}</td>
-        </tr>
-        <tr>
-            <td>{{ lista[2].matricula }}</td>
-            <td>{{ lista[2].nome }}</td>
-            <td>{{ lista[2].email }}</td>
-            <td>{{ lista[2].cadastro == true ? 'Aprovado' : 'Reprovado' }}</td>
-            <td>{{ lista[2].cursos }}</td>
+        <tr *ngFor="let aluno of lista">
+            <td>{{ aluno.matricula }}</td>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.email }}</td>
+            <td>{{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</td>
+            <td>{{ aluno.cursos }}</td>
         </tr>
     </table>
 </div>
