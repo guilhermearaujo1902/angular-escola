@@ -12,4 +12,12 @@ export class Aluno {
   @Input()
   aluno!: AlunoInterface;
 
+  ngOnInit(): void {
+    this.imprimir();
+  }
+
+  imprimir(): void {
+    console.log(this.aluno);
+  }
+
 }

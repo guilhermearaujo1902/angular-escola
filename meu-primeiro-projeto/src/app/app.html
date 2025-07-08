@@ -5,18 +5,34 @@
 <main>
 
   <div class="botoes">
-    <button (click)="alterarExibicao()">
-      Mostrar {{ exibicao == 'cards' ? 'Lista' : 'Cards' }}
-    </button>
+    <div>
+      <button (click)="alterarExibicao()">
+        Mostrar {{ exibicao == 'cards' ? 'Lista' : 'Cards' }}
+      </button>
+    </div>
+    <div>
+      <p>
+        <strong>Filtros:</strong>
+      </p>
+      <button (click)="filtraAlunos('aprovados')">
+        Aprovados
+      </button>
+      <button (click)="filtraAlunos('reprovados')">
+        Reprovados
+      </button>
+      <button (click)="filtraAlunos('todos')">
+        Todos
+      </button>
+    </div>
   </div>
 
   <section class="cards" *ngIf="exibicao == 'cards'" >
-    <app-aluno *ngFor="let alunoDaLista of listaAlunos" [aluno]="alunoDaLista"></app-aluno>
+    <app-aluno *ngFor="let alunoDaLista of listaFiltro" [aluno]="alunoDaLista"></app-aluno>
 
   </section>
 
   <section class="lista" *ngIf="exibicao == 'lista'" >
-    <app-aluno-lista [lista]="listaAlunos"></app-aluno-lista>
+    <app-aluno-lista [lista]="listaFiltro"></app-aluno-lista>
   </section>
 </main>
 

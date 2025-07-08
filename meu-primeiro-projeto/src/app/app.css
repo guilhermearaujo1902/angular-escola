@@ -16,7 +16,7 @@ main {
     justify-content: center;
 }
 
-.botoes {
+.botoes div {
     margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
