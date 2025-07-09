@@ -1,5 +1,5 @@
 .lista {
-    width: 800px;
+    width: 900px;
 }
 
 table, tr {
@@ -31,4 +31,21 @@ table tr:nth-child(odd) {
 table tr:hover {
     background-color: #1c076e;
     color: #FFF;
+}
+
+.btn {
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.btn-green {
+    background-color: #046b04;
+}
+
+.btn-red {
+    background-color: #b70f0f;
 }

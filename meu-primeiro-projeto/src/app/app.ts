@@ -20,7 +20,7 @@ export class App {
       cadastro: false,
       cursos: ['Javascript', 'HTML', 'CSS'],
       imagem: 'assets/images/user1.png',
-      notas: []
+      notas: [7,6]
     },
     {
       matricula: 222,
@@ -29,7 +29,7 @@ export class App {
       cadastro: true,
       cursos: ['Java', 'Postgres'],
       imagem: 'assets/images/user3.png',
-      notas: [4,8,7]
+      notas: [10,8,9,10]
     },
     {
       matricula: 333,
@@ -38,7 +38,7 @@ export class App {
       cadastro: false,
       cursos: ['Python', 'Oracle'],
       imagem: 'assets/images/user2.png',
-      notas: []
+      notas: [4,2,7]
     },
     {
       matricula: 444,
@@ -47,7 +47,7 @@ export class App {
       cadastro: true,
       cursos: ['C++', 'PLSQL'],
       imagem: 'assets/images/user4.webp',
-      notas: []
+      notas: [8,7]
     }
   ];
 
