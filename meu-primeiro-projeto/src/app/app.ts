@@ -20,7 +20,8 @@ export class App {
       cadastro: false,
       cursos: ['Javascript', 'HTML', 'CSS'],
       imagem: 'assets/images/user1.png',
-      notas: [7,6]
+      notas: [7,6],
+      status: true
     },
     {
       matricula: 222,
@@ -29,7 +30,8 @@ export class App {
       cadastro: true,
       cursos: ['Java', 'Postgres'],
       imagem: 'assets/images/user3.png',
-      notas: [10,8,9,10]
+      notas: [10,8,9,10],
+      status: true
     },
     {
       matricula: 333,
@@ -38,7 +40,8 @@ export class App {
       cadastro: false,
       cursos: ['Python', 'Oracle'],
       imagem: 'assets/images/user2.png',
-      notas: [4,2,7]
+      notas: [4,2,7],
+      status: true
     },
     {
       matricula: 444,
@@ -47,7 +50,8 @@ export class App {
       cadastro: true,
       cursos: ['C++', 'PLSQL'],
       imagem: 'assets/images/user4.webp',
-      notas: [8,7]
+      notas: [8,7],
+      status: true
     }
   ];
 
@@ -97,6 +101,19 @@ export class App {
       this.listaFiltro = this.listaAlunos;
     }
 
+  }
+
+  onExcluir(matricula: number): void {
+    console.log(`No componente APP - matricula: ${matricula}`);
+
+    // Percorrer a lista de alunos
+    this.listaAlunos.forEach( (aluno, index) => {
+      // Encontrar o aluno com a matrícula igual a do parâmetro recebido
+      if (aluno.matricula == matricula) {
+        // Remover o aluno da lista 
+        this.listaAlunos.splice(index, 1);
+      }
+    });
   }
 
 }

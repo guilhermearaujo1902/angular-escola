@@ -32,7 +32,7 @@
   </section>
 
   <section class="lista" *ngIf="exibicao == 'lista'" >
-    <app-aluno-lista [lista]="listaFiltro"></app-aluno-lista>
+    <app-aluno-lista [lista]="listaFiltro" (excluir)="onExcluir($event)"></app-aluno-lista>
   </section>
 </main>
 

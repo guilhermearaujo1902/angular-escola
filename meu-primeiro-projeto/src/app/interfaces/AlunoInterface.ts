@@ -6,4 +6,5 @@ export interface AlunoInterface {
     cursos: string[];
     imagem: string;
     notas: number[];
+    status: boolean;
 }
