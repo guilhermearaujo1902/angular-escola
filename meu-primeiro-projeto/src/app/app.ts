@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlunoInterface } from './interfaces/AlunoInterface';
+import { AlunoServico } from './servicos/aluno-servico';
 
 @Component({
   selector: 'app-root',
@@ -10,52 +11,16 @@ import { AlunoInterface } from './interfaces/AlunoInterface';
 export class App {
   protected title = 'meu-primeiro-projeto';
 
+  constructor(private servico: AlunoServico){}
+  
+  listaAlunos!: AlunoInterface[];
+  listaFiltro!: AlunoInterface[];
+
+  ngOnInit(): void {
+    this.listaFiltro = this.servico.getListaAlunos();
+  }
+
   exibicao: string = 'lista';
-
-  listaAlunos: AlunoInterface[] = [
-    {
-      matricula: 111,
-      nome: 'Harry Potter',
-      email: 'harry@proway.com',
-      cadastro: false,
-      cursos: ['Javascript', 'HTML', 'CSS'],
-      imagem: 'assets/images/user1.png',
-      notas: [7,6],
-      status: true
-    },
-    {
-      matricula: 222,
-      nome: 'Hermione Granger',
-      email: 'hermione@proway.com',
-      cadastro: true,
-      cursos: ['Java', 'Postgres'],
-      imagem: 'assets/images/user3.png',
-      notas: [10,8,9,10],
-      status: true
-    },
-    {
-      matricula: 333,
-      nome: 'Rony Weasley',
-      email: 'rony@proway.com',
-      cadastro: false,
-      cursos: ['Python', 'Oracle'],
-      imagem: 'assets/images/user2.png',
-      notas: [4,2,7],
-      status: true
-    },
-    {
-      matricula: 444,
-      nome: 'Bob Esponja',
-      email: 'bob@proway.com',
-      cadastro: true,
-      cursos: ['C++', 'PLSQL'],
-      imagem: 'assets/images/user4.webp',
-      notas: [8,7],
-      status: true
-    }
-  ];
-
-  listaFiltro: AlunoInterface[] = this.listaAlunos;
 
   alterarExibicao(): void {
     if (this.exibicao == 'cards') {
@@ -104,8 +69,6 @@ export class App {
   }
 
   onExcluir(matricula: number): void {
-    console.log(`No componente APP - matricula: ${matricula}`);
-
     // Percorrer a lista de alunos
     this.listaAlunos.forEach( (aluno, index) => {
       // Encontrar o aluno com a matrícula igual a do parâmetro recebido

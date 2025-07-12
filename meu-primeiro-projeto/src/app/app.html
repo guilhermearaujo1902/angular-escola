@@ -34,6 +34,10 @@
   <section class="lista" *ngIf="exibicao == 'lista'" >
     <app-aluno-lista [lista]="listaFiltro" (excluir)="onExcluir($event)"></app-aluno-lista>
   </section>
+
+  <section>
+    <app-aluno-form></app-aluno-form>
+  </section>
 </main>
 
 <footer>
